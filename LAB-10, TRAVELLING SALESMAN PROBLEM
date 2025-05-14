@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <limits.h>
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void permute(int arr[], int l, int r, int cost[][4], int* minCost, int* currCost) {
+    if (l == r) {
+        int currNode = 0;
+        *currCost = 0;
+        
+        for (int i = 0; i < r; i++) {
+            *currCost += cost[currNode][arr[i]];
+            currNode = arr[i];
+        }
+
+        *currCost += cost[currNode][0];
+        if (*currCost < *minCost)
+            *minCost = *currCost;
+        return;
+    }
+
+    for (int i = l; i < r; i++) {
+        swap(&arr[l], &arr[i]);
+        permute(arr, l + 1, r, cost, minCost, currCost);
+        swap(&arr[l], &arr[i]);
+    }
+}
+
+int tsp(int cost[][4], int numNodes) {
+    int nodes[numNodes - 1];
+    for (int i = 1; i < numNodes; i++)
+        nodes[i - 1] = i;
+
+    int minCost = INT_MAX;
+    int currCost = 0;
+    permute(nodes, 0, numNodes - 1, cost, &minCost, &currCost);
+
+    return minCost;
+}
+
+int main() {
+    int cost[4][4] = {{0, 10, 15, 20}, {10, 0, 35, 25}, {15, 35, 0, 30}, {20, 25, 30, 0}};
+    int res = tsp(cost, 4);
+    printf("%d\n", res);
+    return 0;
+}
