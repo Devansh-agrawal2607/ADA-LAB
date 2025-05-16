@@ -1,0 +1,75 @@
+LAB-1: BUBBLE SORT
+Original array: 64 25 12 22 11 
+Sorted array: 11 12 22 25 64 
+Time taken: 0.000001 seconds
+
+##############################################
+LAB-1: SELECTION SORT
+Original array: 54 26 2 32 51 
+Sorted array: 2 26 32 51 54 
+Time taken: 0.000001 seconds
+
+##############################################
+LAB-2: PATTERN MATCHING
+Enter the text: abcdabccd
+Enter the pattern to search: bcd
+Pattern found at index 1
+
+##############################################
+LAB-3: MERGE SORT
+Original array: 38 27 43 3 9 82 10 
+Sorted array: 3 9 10 27 38 43 82 
+
+##############################################
+LAB-3: QUICK SORT
+Original array: 10 7 8 9 1 5 
+Sorted array: 1 5 7 8 9 10 
+
+##############################################
+LAB-4: KRUSKAL'S ALGORITHM
+19
+
+##############################################
+LAB-4: PRIMS ALGORITHM
+Edge 	Weight
+0 - 1 	2 
+1 - 2 	3 
+0 - 3 	6 
+1 - 4 	5 
+
+##############################################
+LAB-5: INSERTION SORT
+5 6 11 12 13 
+
+##############################################
+LAB-6: TOPOLOGICL SORT USING DFS
+Enter number of vertices and edges: 6 6
+5 2
+5 0
+4 0
+4 1
+2 3
+3 1
+
+5 4 2 3 1 0 
+
+##############################################
+LAB-7: HEAP SORT
+Sorted array is 
+2 3 4 5 8 9 10 
+
+##############################################
+LAB-8: FLOYD'S ALGORITHM
+0 3 7 5 
+2 0 6 4 
+3 1 0 5 
+5 3 2 0 
+
+##############################################
+LAB-9: N QUEENS USING BACKTRACING
+Solution: 
+2 4 1 3 
+
+##############################################
+LAB-10: TRAVELLING SALESMAN
+Minimum tour cost: 80
